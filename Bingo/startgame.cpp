@@ -36,14 +36,20 @@ void startgame::MapPrinting(int map[5][5], int map2[5][5]){
         cout<<" ";
         cout<<"|";
         for(int j=0;j<5;j++){
-            cout.width(4);
-            cout<<map[i][j];
+            if(map[i][j]==0){
+                cout.width(4);
+                cout<<"  😀";
+            }
+            else{
+                cout.width(4);
+                cout<<map[i][j];
+            }
         }
         cout<<"\t"<<"|";
         for(int j=0;j<5;j++){
             if(map2[i][j]==0){
                 cout.width(4);
-                cout<<"0";
+                cout<<"  😀";
             }
             else{
                 cout.width(4);

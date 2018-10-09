@@ -31,12 +31,77 @@ void playgame::PlayerTurn(int map[5][5], int map2[5][5], int num[25]){
 
 void playgame::ComputerTurn(int map[5][5], int map2[5][5], int num[25]){
     int SelectNum2 = 0;
-    SelectNum2=rand()%25+1;
-    for(int i=0;i<25;i++){
-        if(num[i]==SelectNum2){
-            SelectNum2=rand()%25+1;
-            i=0;
+    int rowcheck = 0;
+    int colcheck = 0;
+    int row=5;
+    int col=5;
+    int reset=0,reset2=0;
+    if(map[2][2]!=0){
+        SelectNum2 = map[2][2];
+    }
+    else{
+        SelectNum2=rand()%25+1;
+        for(int i=0;i<100;i++){
+            for(int k=0;k<25;k++){
+                if(num[k]==SelectNum2){
+                    SelectNum2=rand()%25+1;
+                    k=0;
+                }
+            }
+            for(int j=0;j<5;j++){
+                for(int s=0;s<5;s++){
+                    if(map[j][s]==SelectNum2){
+                        row=j;
+                        col=s;
+                    }
+                }
+            }
+            for(int s=0;s<5;s++){
+                if(map[row][s]==0){
+                    colcheck++;
+                }
+            }
+            for(int j=0;j<5;j++){
+                if(map[j][col]==0){
+                    rowcheck++;
+                }
+            }
+            if(reset2<20){
+                reset2++;
+                if(colcheck==4||rowcheck==4){
+                    rowcheck=0;
+                    colcheck=0;
+                    continue;
+                }
+                else{
+                    if(colcheck==3||rowcheck==3){
+                        rowcheck=0;
+                        colcheck=0;
+                        continue;
+                    }
+                    else{
+                        if(colcheck==2||rowcheck==2){
+                            rowcheck=0;
+                            colcheck=0;
+                            continue;
+                        }
+                        else{
+                            if(colcheck==1||rowcheck==1){
+                                rowcheck=0;
+                                colcheck=0;
+                                break;
+                            }
+                            else{
+                                SelectNum2=rand()%25+1;
+                                i=0;
+                            }
+                        }
+                    }
+                }
+            }
         }
+        reset=0;
+        reset2=0;
     }
     for(int i=0;i<25;i++){
         if(num[i]==0){
@@ -44,6 +109,7 @@ void playgame::ComputerTurn(int map[5][5], int map2[5][5], int num[25]){
             break;
         }
     }
+
     rule gamerule2;
     gamerule2.ChangeMap(map,SelectNum2);
     gamerule2.ChangeMap(map2,SelectNum2);

@@ -44,6 +44,9 @@ int main(){
         ComputerBingo=bingorule.BingoCheck(ComputerMap);
         result();
         if(win!=1){
+            game.MapPrinting(PlayerMap,ComputerMap);
+            cout<<"   Player's Bingo : "<<PlayerBingo;
+            cout<<"   |   Computer's Bingo : "<<ComputerBingo<<endl<<endl;
             break;
         }
         play.ComputerTurn(ComputerMap,PlayerMap,SelectNum);
@@ -51,6 +54,9 @@ int main(){
         ComputerBingo=bingorule.BingoCheck(ComputerMap);
         result();
         if(win!=1){
+            game.MapPrinting(PlayerMap,ComputerMap);
+            cout<<"   Player's Bingo : "<<PlayerBingo;
+            cout<<"   |   Computer's Bingo : "<<ComputerBingo<<endl<<endl;
             break;
         }
         game.MapPrinting(PlayerMap,ComputerMap);
