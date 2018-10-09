@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		17F169312169FA1700EE1A9F /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 17F169302169FA1700EE1A9F /* main.cpp */; };
+		17F1693C2169FF6900EE1A9F /* startgame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 17F1693A2169FF6900EE1A9F /* startgame.cpp */; };
+		17F1693F216A1C0700EE1A9F /* playgame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 17F1693D216A1C0700EE1A9F /* playgame.cpp */; };
+		17F16942216A30BE00EE1A9F /* rule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 17F16940216A30BE00EE1A9F /* rule.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +28,12 @@
 /* Begin PBXFileReference section */
 		17F1692D2169FA1700EE1A9F /* Bingo */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Bingo; sourceTree = BUILT_PRODUCTS_DIR; };
 		17F169302169FA1700EE1A9F /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		17F1693A2169FF6900EE1A9F /* startgame.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = startgame.cpp; sourceTree = "<group>"; };
+		17F1693B2169FF6900EE1A9F /* startgame.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = startgame.hpp; sourceTree = "<group>"; };
+		17F1693D216A1C0700EE1A9F /* playgame.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = playgame.cpp; sourceTree = "<group>"; };
+		17F1693E216A1C0700EE1A9F /* playgame.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = playgame.hpp; sourceTree = "<group>"; };
+		17F16940216A30BE00EE1A9F /* rule.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = rule.cpp; sourceTree = "<group>"; };
+		17F16941216A30BE00EE1A9F /* rule.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = rule.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +67,12 @@
 			isa = PBXGroup;
 			children = (
 				17F169302169FA1700EE1A9F /* main.cpp */,
+				17F1693A2169FF6900EE1A9F /* startgame.cpp */,
+				17F1693B2169FF6900EE1A9F /* startgame.hpp */,
+				17F1693D216A1C0700EE1A9F /* playgame.cpp */,
+				17F1693E216A1C0700EE1A9F /* playgame.hpp */,
+				17F16940216A30BE00EE1A9F /* rule.cpp */,
+				17F16941216A30BE00EE1A9F /* rule.hpp */,
 			);
 			path = Bingo;
 			sourceTree = "<group>";
@@ -118,7 +133,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17F1693C2169FF6900EE1A9F /* startgame.cpp in Sources */,
+				17F16942216A30BE00EE1A9F /* rule.cpp in Sources */,
 				17F169312169FA1700EE1A9F /* main.cpp in Sources */,
+				17F1693F216A1C0700EE1A9F /* playgame.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
