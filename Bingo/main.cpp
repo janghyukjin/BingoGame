@@ -1,6 +1,7 @@
 #include <iostream>
 #include <time.h>
 #include <stdlib.h>
+#include <unistd.h>
 #include "startgame.hpp"
 #include "playgame.hpp"
 #include "rule.hpp"
@@ -49,6 +50,7 @@ int main(){
             cout<<"   |   Computer's Bingo : "<<ComputerBingo<<endl<<endl;
             break;
         }
+        usleep(500000);
         play.ComputerTurn(ComputerMap,PlayerMap,SelectNum);
         PlayerBingo=bingorule.BingoCheck(PlayerMap);
         ComputerBingo=bingorule.BingoCheck(ComputerMap);

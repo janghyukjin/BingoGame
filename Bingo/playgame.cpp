@@ -1,6 +1,7 @@
 #include "playgame.hpp"
 #include "rule.hpp"
 #include <iostream>
+#include <unistd.h>
 #include <time.h>
 #include <stdlib.h>
 
@@ -109,7 +110,8 @@ void playgame::ComputerTurn(int map[5][5], int map2[5][5], int num[25]){
             break;
         }
     }
-
+    cout<<"Computer가 선택한 숫자 : "<<SelectNum2<<endl;
+    usleep(1000000);
     rule gamerule2;
     gamerule2.ChangeMap(map,SelectNum2);
     gamerule2.ChangeMap(map2,SelectNum2);
