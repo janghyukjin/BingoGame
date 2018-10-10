@@ -1,5 +1,5 @@
-#include "playgame.hpp"
-#include "rule.hpp"
+#include "Playgame.hpp"
+#include "Rule.hpp"
 #include <iostream>
 #include <unistd.h>
 #include <time.h>
@@ -7,7 +7,7 @@
 
 using namespace std;
 
-void playgame::PlayerTurn(int map[5][5], int map2[5][5], int num[25]){
+void Playgame::PlayerTurn(int map[5][5], int map2[5][5], int num[25]){
     int SelectNum = 0;
     cout<<"숫자를 입력하세요 : ";
     cin >> SelectNum;
@@ -25,12 +25,12 @@ void playgame::PlayerTurn(int map[5][5], int map2[5][5], int num[25]){
             break;
         }
     }
-    rule gamerule;
+    Rule gamerule;
     gamerule.ChangeMap(map,SelectNum);
     gamerule.ChangeMap(map2,SelectNum);
 }
 
-void playgame::ComputerTurn(int map[5][5], int map2[5][5], int num[25]){
+void Playgame::ComputerTurn(int map[5][5], int map2[5][5], int num[25]){
     int SelectNum2 = 0;
     int rowcheck = 0;
     int colcheck = 0;
@@ -112,7 +112,7 @@ void playgame::ComputerTurn(int map[5][5], int map2[5][5], int num[25]){
     }
     cout<<"Computer가 선택한 숫자 : "<<SelectNum2<<endl;
     usleep(1000000);
-    rule gamerule2;
+    Rule gamerule2;
     gamerule2.ChangeMap(map,SelectNum2);
     gamerule2.ChangeMap(map2,SelectNum2);
 }
